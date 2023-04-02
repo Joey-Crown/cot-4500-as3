@@ -18,7 +18,7 @@ def euler_mehthod(a, b, n, alpha):
     return w
 
 ans_q1 = euler_mehthod(a, b, n, alpha)
-print(ans_q1, end="\n\n")
+print("%.5f" % ans_q1, end="\n\n")
 
 # Question 2
 def runge_kutta(a, b, n, alpha):
@@ -35,8 +35,9 @@ def runge_kutta(a, b, n, alpha):
         t = t + h
     return w
 
+
 ans_q2 = runge_kutta(a, b, n, alpha)
-print(ans_q2, end="\n\n")
+print("%.5f" % ans_q2, end="\n\n")
 
 # Question 3
 augmented_matrix = np.array([[2,-1,1,6],
@@ -67,7 +68,8 @@ def gauss_jordan(Ab, n):
     return Ab[:,n]
 
 ans_q3 = gauss_jordan(augmented_matrix, n)
-print(ans_q3.astype(int), end="\n\n")
+print(ans_q3, end="\n\n")
+
 
 # Question 4
 matrix = np.array([[1,1,0,3],
@@ -98,7 +100,7 @@ def LU_factorization(A):
 ans_q4_b, ans_q4_c = LU_factorization(matrix)
 # get determinant by multiply the diagonal of U
 ans_q4_a = np.prod(np.diagonal(ans_q4_c))
-print(ans_q4_a, end="\n\n")
+print("%.5f" % ans_q4_a, end="\n\n")
 print(ans_q4_b, end="\n\n")
 print(ans_q4_c, end="\n\n")
 
